@@ -9,6 +9,8 @@
     <!-- preload all our textures -->
     <a-assets>
         <img id='moon' src='textures/sarahsmoon.jpg'/>
+		<img id='firemoon' src='textures/firemoon.jpg'/>
+		<img id='moonwalker' src='textures/astronaught.jpg'/>
         <!-- the picture below used to be a .png format -->
 		<img id='stars' src='textures/stars.png'/>
     </a-assets>
@@ -20,7 +22,13 @@
     </a-sphere>
  
      <!-- add a second moon to the scene -->
-    <a-sphere position='1 5 0' material='src: #moon;'>
+    <a-sphere position='3 3 0' material='src: #firemoon;'>
+        <!-- add an animation to make it rotate -->
+        <a-animation to='0 360 0' easing='linear' dur='10000' repeat='indefinite'/>
+    </a-sphere>
+	
+	     <!-- add a third moon to the scene -->
+    <a-sphere position='0 3 3' material='src: #moonwalker;'>
         <!-- add an animation to make it rotate -->
         <a-animation to='0 360 0' easing='linear' dur='20000' repeat='indefinite'/>
     </a-sphere>
